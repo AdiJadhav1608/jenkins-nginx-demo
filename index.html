@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CloudOps Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            Cloud<span>Ops</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#technologies">Technologies</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="nav-button" onclick="scrollToContact()">
+            Get Started
+        </button>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🚀 Jenkins + Nginx Deployment
+            </div>
+
+            <h1>
+                Build. Deploy.
+                <span>Automate.</span>
+            </h1>
+
+            <p>
+                A modern Cloud & DevOps dashboard demonstrating
+                automated CI/CD deployment using Jenkins and Nginx.
+            </p>
+
+            <div class="hero-buttons">
+                <button onclick="showDeploymentMessage()">
+                    Deploy Now
+                </button>
+
+                <button class="secondary-button"
+                        onclick="document.getElementById('services').scrollIntoView()">
+                    Explore Services
+                </button>
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="terminal-header">
+                <span>●</span>
+                <span>●</span>
+                <span>●</span>
+            </div>
+
+            <div class="terminal">
+
+                <p>$ git push origin main</p>
+                <p class="success">✓ GitHub repository updated</p>
+
+                <p>$ jenkins build</p>
+                <p class="success">✓ Build successful</p>
+
+                <p>$ ./test.sh</p>
+                <p class="success">✓ All tests passed</p>
+
+                <p>$ ./deploy.sh</p>
+                <p class="success">✓ Deployment successful</p>
+
+                <p class="cursor">$ _</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat">
+            <h2>99.9%</h2>
+            <p>Availability</p>
+        </div>
+
+        <div class="stat">
+            <h2>24/7</h2>
+            <p>Monitoring</p>
+        </div>
+
+        <div class="stat">
+            <h2>10+</h2>
+            <p>Deployments</p>
+        </div>
+
+        <div class="stat">
+            <h2>5+</h2>
+            <p>Technologies</p>
+        </div>
+
+    </section>
+
+
+    <!-- Services -->
+    <section id="services" class="section">
+
+        <div class="section-title">
+
+            <span>WHAT WE DO</span>
+
+            <h2>
+                Cloud & DevOps Services
+            </h2>
+
+            <p>
+                Tools and practices used to build reliable,
+                scalable and automated applications.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-icon">☁️</div>
+
+                <h3>Cloud Infrastructure</h3>
+
+                <p>
+                    Deploy scalable infrastructure using
+                    modern cloud platforms and automation.
+                </p>
+
+                <a href="#">Learn More →</a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">🔄</div>
+
+                <h3>CI/CD Pipelines</h3>
+
+                <p>
+                    Automate application builds, testing
+                    and deployments with Jenkins.
+                </p>
+
+                <a href="#">Learn More →</a>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-icon">📦</div>
+
+                <h3>Containerization</h3>
+
+                <p>
+                    Package applications using Docker
+                    for consistent deployments.
+                </p>
+
+                <a href="#">Learn More →</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Technologies -->
+    <section id="technologies" class="technology-section">
+
+        <div class="section-title">
+
+            <span>TECH STACK</span>
+
+            <h2>
+                Technologies We Use
+            </h2>
+
+        </div>
+
+
+        <div class="technology-grid">
+
+            <div class="technology">
+                <strong>☁️ AWS</strong>
+                <p>Cloud Infrastructure</p>
+            </div>
+
+            <div class="technology">
+                <strong>🔧 Jenkins</strong>
+                <p>CI/CD Automation</p>
+            </div>
+
+            <div class="technology">
+                <strong>🐳 Docker</strong>
+                <p>Containerization</p>
+            </div>
+
+            <div class="technology">
+                <strong>🌐 Nginx</strong>
+                <p>Web Server</p>
+            </div>
+
+            <div class="technology">
+                <strong>☸ Kubernetes</strong>
+                <p>Container Orchestration</p>
+            </div>
+
+            <div class="technology">
+                <strong>🏗 Terraform</strong>
+                <p>Infrastructure as Code</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Deployment Section -->
+    <section class="deployment">
+
+        <div>
+
+            <span>DEPLOYMENT STATUS</span>
+
+            <h2>
+                Your application is ready to deploy.
+            </h2>
+
+            <p>
+                Push your code to GitHub and let Jenkins
+                automatically build, test and deploy it.
+            </p>
+
+        </div>
+
+        <button onclick="showDeploymentMessage()">
+            Check Deployment
+        </button>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact section">
+
+        <div class="section-title">
+
+            <span>CONTACT</span>
+
+            <h2>
+                Ready to Automate?
+            </h2>
+
+            <p>
+                Start building reliable and automated
+                deployment pipelines today.
+            </p>
+
+        </div>
+
+        <button onclick="showContactMessage()">
+            Start a Project
+        </button>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="logo">
+            Cloud<span>Ops</span>
+        </div>
+
+        <p>
+            © 2026 CloudOps Dashboard. Built with Jenkins & Nginx.
+        </p>
+
+        <p class="footer-status">
+            ● System Operational
+        </p>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
